@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Toyo Toys</title>
+    <link rel="icon" type="image/png" href="./logo...webp">
+    <style>
+          .navbar {
+  background-color: #BE9EB5;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 8px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.collapse{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        margin-left: 75px;
+}
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+.search-box {
+  display: none;
+  position: relative;
+}
+
+.search-box input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 200px;
+  font-size: 17px;
+  color: black;
+  background: #BE9EB5;
+}
+
+.search-box input::placeholder {
+  color: black;
+}
+
+.search-box .go-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 70px;
+  width: 70px;
+  background: #BE9EB5;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .search-box {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .search-box .go-icon {
+    width: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .search-box .go-icon {
+    width: 50px;
+  }
+}
+    .fas {
+        
+        color: black;
+    }
+    .modal{
+      size-adjust: 24px;
+    }
+    .btn-primary{
+        background-color: #BE9EB5 ;
+    }
+    .btn-primary:hover{
+        background-color: #BE9EB5;
+    }
+    .dropdown-menu a:hover {
+            background-color: #BE9EB5;
+        }
+        .dropdown-menu {
+          font-size: 14px;
+        }
+        .top-section {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .top-section div {
+            max-width: 300px;
+        }
+        .footer img{
+        margin-top: -40px;
+       }
+        .footer {
+          background-color: #BE9EB5;
+          color: black;
+          padding: 30px 20px;
+          text-align: center;
+        }
+      
+        .footer-container {
+          display: flex;
+          justify-content: space-between;
+          max-width: 1200px;
+          margin: auto;
+        }
+      
+        .footer-section {
+          width: 22%;
+          min-width: 200px;
+          margin-bottom: 20px;
+        }
+      
+        .footer-section h3 {
+          margin-bottom: 15px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          font-size: 20px;
+        }
+      .footer-section p{
+        color: black;
+      }
+        .footer-section ul {
+          list-style: none;
+          padding: 0;
+        }
+      
+        .footer-section ul li a {
+          color: black;
+          text-decoration: none;
+          display: block;
+          margin-bottom: 10px;
+        }
+      
+        .footer-section ul li a:hover {
+          text-decoration: underline;
+        }
+      
+        .social-icons  {
+          display: flex;
+          justify-content: center;
+        }
+        .social-icons a{
+    list-style: none;
+}
+.social-icons a i{
+    color: black;
+    margin: 8px;
+    font-size: 30px;
+
+}
+.social-icons a i:hover{
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    transition: 0.5 all;
+}
+      
+        .footer-section form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .footer-section input {
+          padding: 8px;
+          width: 80%;
+          margin-bottom: 10px;
+          border: none;
+          border-radius: 5px;
+        }
+      
+        .footer-section button {
+          padding: 8px 15px;
+          background: black;
+          border: none;
+          color: white;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+      
+        .footer-bottom {
+          font-size: 14px;
+          background-color: black;
+          color: #ffffff;
+          display: block;
+          text-align: center; 
+        }
+      
+        @media (max-width: 768px) {
+          .footer-container {
+            flex-direction: column;
+            align-items: center;
+          }
+      
+          .footer-section {
+            width: 90%;
+          }
+        }
+        .bg{
+            background-color: #1e7e34;
+            height: 2px;
+        }
+        /* Banner Styles */
+        .banner {
+            background-color: #B39EB5;
+            text-align: center;
+            padding: 20px;
+            color: black;
+        }
+        .card {
+            width: 180px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card-img-top {
+            width: 90%;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .card-body {
+            padding: 10px;
+        }
+        .card-title {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .card-text {
+            font-size: 14px;
+        }
+        .price {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .old-price {
+            color: #6c757d;
+            text-decoration: line-through;
+            margin-left: 5px;
+        }
+.modal-dialog {
+    max-width: 400px; 
+    margin: 1rem auto; 
+}
+.modal-image {
+    max-width: 100%; 
+    max-height: 200px; 
+    height: auto; 
+    width: auto; 
+    object-fit: contain; 
+    margin: 0 auto; 
+    display: block;
+    border-radius: 8px;
+}
+.modal-body {
+    padding: 15px; 
+}
+.modal-title {
+    font-size: 1.2rem; 
+}
+
+.modal-description {
+    font-size: 0.7rem; 
+}
+        .btn-add-to-cart {
+            background-color: #28a745; 
+            border-color: #28a745;
+            color: white;
+        }
+
+        .btn-add-to-cart:hover {
+            background-color: #218838; 
+            border-color: #1e7e34;
+        }
+        .btn-BuyNow-modal {
+            background-color: #1e7e34; 
+            border-color: #1e7e34;
+            color: white;
+        }
+
+        .btn-BuyNow-modal:hover {
+            background-color: #1e7e34; 
+            border-color: #1e7e34;
+        }
+        /* Common styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* For smaller screens like mobile */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;  /* Center all cards */
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto; /* Center horizontally */
+  }
+}
+
+        .rating-stars {
+            color: #ffc107; 
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .modal-description {
+            font-size: 1rem;
+            color: #555;
+            margin-top:5px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: center;
+            padding: 20px;
+            gap: 30px; 
+        }
+        .category {
+            text-align: center;
+            flex: 0 0 auto;
+        }
+        .category img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px; 
+        }
+        .category p {
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .categories {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .category img {
+                width: 90px;
+                height: 90px;
+            }
+            .categories {
+                gap: 20px; 
+            }
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+           <img src="./logo...webp" alt="" height="100px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./about.html">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./contact.html">Contact us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Boys
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                    <li><a class="dropdown-item" href="./guns.html">Guns</a></li>
+                                    <li><a class="dropdown-item" href="./action.html">Action Figures</a></li>
+                                    <li><a class="dropdown-item" href="./ss.html">Swing & Slides</a></li>
+                                    <li><a class="dropdown-item" href="./cars.html">Remote Cars</a></li>
+                                    <li><a class="dropdown-item" href="./watches.html">Wrist Watches</a></li>
+                                    <li><a class="dropdown-item" href="./pools.html">Swimming Pool</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Girls
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                    <li><a class="dropdown-item" href="./doll house.html">Doll House</a></li>
+                                <li><a class="dropdown-item" href="./kitchenhouse.html">Kitchen Set</a></li>
+                                <li><a class="dropdown-item" href="./fashionkit.html">Fashion Set</a></li>
+                                <li><a class="dropdown-item" href="./costume.html">Girls Costume</a></li>
+                                <li><a class="dropdown-item" href="./wristwatch.html">Wrist Wathces</a></li>
+                                <li><a class="dropdown-item" href="./tenthouse.html">Tent House</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Baby
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                    <li><a class="dropdown-item" href="./bubble.html">Bubble Makers</a></li>
+                                    <li><a class="dropdown-item" href="./blocks .html">Baby Blocks</a></li>
+                                    <li><a class="dropdown-item" href="./friction.html">Friction Toys</a></li>
+                                    <li><a class="dropdown-item" href="./pushh.html">Push Cars</a></li>
+                                    <li><a class="dropdown-item" href="./theater.html">Teether & Rattle Set</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Brands
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                  <li><a class="dropdown-item" href="./Lego.html">Lego</a></li>
+                                  <li><a class="dropdown-item" href="./Hot wheel.html">Hot Wheels</a></li>
+                                  <li><a class="dropdown-item" href="./barbie.html">Barbie</a></li>
+                                  <li><a class="dropdown-item" href="./Playgo.html">Playgo</a></li>
+                                  <li><a class="dropdown-item" href="./Tikes.html">Little tikes</a></li>
+                                  <li><a class="dropdown-item" href="./Stuff toy.html">Disney (Soft Toys)</a></li>
+                              </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    By Age
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                    <li><a class="dropdown-item" href="./age .html">0-1 Yrs</a></li>
+                                    <li><a class="dropdown-item" href="./age1.html">1-3 Yrs</a></li>
+                                    <li><a class="dropdown-item" href="./age2.html">3-6 Yrs</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active" href="#" id="dropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    By Price
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                    <li><a class="dropdown-item" href="./price500.html">Toys Under Rs.500</a></li>
+                                    <li><a class="dropdown-item" href="./price1500.html">Toys Under Rs.1500</a></li>
+                                    <li><a class="dropdown-item" href="./price1000.html">Toys Under Rs.1000</a></li>
+                                    <li><a class="dropdown-item" href="./price5000.html">Toys Under Rs.5000</a></li>
+                                </ul>
+                            </li>
+                          
+                </ul>
+                <input type="checkbox" id="show-search" style="display: none;">
+                <label for="show-search" class="search-icon"><i class="fas fa-search" style="color: black; cursor: pointer; ;"></i></label>
+                <form action="#" class="search-box">
+                    <input type="text" placeholder="Search here.." required>
+                    <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right" hidden></i></button>
+                </form>
+                <div class="nav-item">
+                    <a class="nav-link" href="#" id="cart-icon" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge bg-danger" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="cart-form">
+                        <div class="mb-3">
+                            <label for="item-name" class="form-label">Item Name</label>
+                            <input type="text" class="form-control" id="item-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="item-quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="item-quantity" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="alert('Product added to cart!');">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#cart-form').on('submit', function(e) {
+                e.preventDefault();
+                // Logic to add item to cart
+                const itemName = $('#item-name').val();
+                const itemQuantity = $('#item-quantity').val();
+                // Update cart count (for demonstration)
+                $('#cart-count').text(parseInt($('#cart-count').text()) + parseInt(itemQuantity));
+                // Clear form fields
+                $('#item-name').val('');
+                $('#item-quantity').val('');
+                // Close modal
+                $('#cartModal').modal('hide');
+            });
+        });
+    </script>
+    
+            </div>
+        </div>
+    </nav>
+     <div class="banner">
+        <h2>Toys For Baby Online Price In Pakistan</h2>
+        <p>Buy Toys for Baby Online At Toy Zone</p>
+        <p>It’s the perfect time for fun and frolic with your Babies with Toy Zone’s collection of Barbie dolls for sale in...</p>
+    </div>
+    
+    <div class="categories container">
+        <div class="category">
+            <a href="./blocks .html">
+            <img src="./block-removebg-preview.png" alt="Baby Blocks">
+            <p>Baby Blocks</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="./bubble.html">
+            <img src="./bubble2.webp" alt="Bubble Makers">
+            <p>Bubble Makers</p>
+            </a>
+            
+        </div>
+        <div class="category">
+            <a href="./friction.html">
+            <img src="./friction 2.webp" alt="Friction Toys">
+            <p>Friction Toys</p>
+            </a>
+        </div>
+        <div class="category">
+            <a href="./pushh.html">
+            <img src="./push 3 - Copy.webp" alt="Push Cars">
+            <p>Push Cars</p>
+        </a>
+        </div>
+        <div class="category">
+            <a href="./theater.html">
+            <img src="./theter.jpeg" alt="Teether& Rattle set">
+            <p>Teether& Rattle set</p>
+        </a>
+        </div>
+    </div>
+    <div class="bg">.</div>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="./after.webp" class="card-img-top" alt="Baby Blocks" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Puzzel Sorter Cube', './after.webp', 'A puzzle sorter cube is a compact, handheld device designed to help organize and sort puzzle pieces by shape, color, or type. It typically features multiple compartments or trays that allow users to efficiently separate and store pieces during the assembly of jigsaw puzzles. This tool helps streamline the puzzle-solving process by keeping pieces organized and easily accessible.', 4.5)">
+                    <div class="card-body">
+                        <h5 class="card-title">Puzzel Sorter Cube</h5>
+                        <p class="card-text">
+                            <span class="price">Rs.350</span>
+                            <span class="old-price">Rs.550</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+     <!-- Card 2 -->
+     <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card">
+            <img src="./block-removebg-preview.png" class="card-img-top" alt="Baby Blocks" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Stock Block', './block-removebg-preview.png', 'A stock block typically refers to a basic, foundational block used in various building or sorting toys. In the context of shape sorters, a stock block can be a generic, simple-shaped block (like a square, triangle, or circle) that children use to learn shape recognition and sorting. These blocks help with cognitive development, motor skills, and problem-solving.')">
+            <div class="card-body">
+                <h5 class="card-title">Stock Block</h5>
+                <p class="card-text">
+                    <span class="price">Rs.520</span>
+                    <span class="old-price">Rs.750</span>
+                </p>
+            </div>
+        </div>
+    </div>
+     <!-- Card 3 -->
+     <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card">
+            <img src="./zipper 1.webp" class="card-img-top" alt="Zipper Blocks" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Barbie Doggy Daycare', './zipper 1.webp', 'A zipper block is a type of toy block or educational tool designed for young children. It typically features a zipper mechanism, allowing children to practice fine motor skills by opening and closing the zipper. These blocks may be part of a larger set that combines sorting, stacking, and zipper activities, helping children develop hand-eye coordination, dexterity, and an understanding of cause and effect.')">
+            <div class="card-body"> 
+                <h5 class="card-title">Zipper Blocks</h5>
+                <p class="card-text">
+                    <span class="price">Rs.350</span>
+                    <span class="old-price">Rs.550</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Card 4 -->
+    <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card">
+            <img src="./shape.jpg" class="card-img-top" alt="Baby Blocks" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Shape Sorter Block', './shape.jpg', ' Shape sorter blocks are colorful toys designed for young children to help develop their motor skills and shape recognition. The set typically includes a variety of blocks in different shapes (like squares, triangles, and circles) that fit into corresponding holes on a box or board. This activity encourages hand-eye coordination, problem-solving, and understanding of spatial relationships.')">
+    
+            <div class="card-body">
+                <h5 class="card-title">Shape Sorter Block</h5>
+                <p class="card-text">
+                    <span class="price">Rs.520</span>
+                    <span class="old-price">Rs.750</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Card 5 -->
+    <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card">
+            <img src="./anime.jpg" class="card-img-top" alt="Baby Blocks" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Building Stackers', './anime.jpg', 'Building stacker blocks are colorful, interlocking blocks designed for young children to stack and build structures. These blocks come in various shapes and sizes, helping children develop fine motor skills, hand-eye coordination, and spatial awareness as they stack them in different arrangements. ')">
+            <div class="card-body">
+                <h5 class="card-title">Building Stackers</h5>
+                <p class="card-text">
+                    <span class="price">Rs.350</span>
+                    <span class="old-price">Rs.500</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Card 6 -->
+    <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card">
+            <img src="./stars.jpg" class="card-img-top" alt="Baby Blocks" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Wooden Star', './stars.jpg', ' A wooden star block is a shape typically found in educational toys, such as shape sorters or stacking games. Made of smooth, durable wood, it is shaped like a star and is used to help young children recognize shapes, develop fine motor skills, and improve hand-eye coordination. These blocks are often part of a larger set that encourages imaginative play and learning.')">
+            <div class="card-body">
+                <h5 class="card-title">Wooden Star</h5>
+                <p class="card-text">
+                    <span class="price">Rs.360</span>
+                    <span class="old-price">Rs.500</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Card 7 -->
+    <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card">
+            <img src="./cylinder-removebg-preview.png" class="card-img-top" alt="Baby Blocks" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Cylinder Block ', './cylinder-removebg-preview.png', ' A cylinder block is a toy block shaped like a cylinder, often used in shape sorter or building sets. Made from materials like wood or plastic, it helps children learn about shapes, improve hand-eye coordination, and develop problem-solving skills. Cylinder blocks can be stacked, sorted, or used in creative play, encouraging spatial awareness and fine motor skills.')">
+            <div class="card-body">
+                <h5 class="card-title">Cylinder Block</h5>
+                <p class="card-text">
+                    <span class="price">Rs.370</span>
+                    <span class="old-price">Rs.550</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Card 8 -->
+    <div class="col-md-3 col-sm-6 mb-4">
+        <div class="card">
+            <img src="./cone.jpg" class="card-img-top" alt="Baby Blocks" data-bs-toggle="modal" data-bs-target="#productModal" onclick="updateModal('Cone Block', './cone.jpg', 'A cone block is a toy block shaped like a cone, commonly used in shape sorter or building sets. It helps young children recognize geometric shapes and develop their motor skills. Made from materials like wood or plastic, cone blocks are used in activities that promote hand-eye coordination, spatial awareness, and creative play.',2)">
+            <div class="card-body">
+                <h5 class="card-title">Cone Block</h5>
+                <p class="card-text">
+                    <span class="price">Rs.380</span>
+                    <span class="old-price">Rs.450</span>
+                </p>
+            </div>
+        </div>
+    </div>
+   
+    
+        </div> 
+    </div> 
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+                    <button type="button" class="btn-BuyNow" data-bs-dismiss="modal" aria-label="BuyNow"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="modal-image" alt="Product Image">
+                    <h3 id="modalTitle" class="mt-3"></h3>
+                    
+                    <div id="modalRating" class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    
+                    <p id="modalDescription" class="modal-description"></p>
+                </div>
+                <div class="modal-footer">
+                    <button  type="submit" class="btn btn-danger" onclick="alert('Product added to cart!');"> 🛒Add to Cart</button>
+                    <a href="./billingform.html"> <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">Buy it Now</button></a> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function updateModal(title, imageSrc, description, rating) {
+            // Update modal content
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalDescription').innerText = description;
+    
+            
+            const ratingStars = document.getElementById('modalRating');
+            ratingStars.innerHTML = ''; 
+            const fullStars = Math.floor(rating);
+            const halfStar = rating % 1 !== 0;
+            const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+    
+            for (let i = 0; i < fullStars; i++) {
+                ratingStars.innerHTML += '<i class="fas fa-star"></i>';
+            }
+            if (halfStar) {
+                ratingStars.innerHTML += '<i class="fas fa-star-half-alt"></i>';
+            }
+            for (let i = 0; i < emptyStars; i++) {
+                ratingStars.innerHTML += '<i class="far fa-star"></i>';
+            }
+        }
+    </script>
+    <div class="top-section">
+        <div>
+            <strong>Value</strong>
+            <p>We only choose original and safe products for our children before putting them on sale.</p>
+        </div>
+        <div>
+            <strong>Replacement Warranty</strong>
+            <p>We accept we can make mistakes, but you're 100% secure. Call us at 03211222869 for solutions.</p>
+        </div>
+        <div>
+            <strong>Nationwide Fastest Delivery</strong>
+            <p>We work with leading courier partners to ensure your package reaches you fast & safely.</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+      <img src="./logo...webp" alt="" height="120">
+        <div class="footer-container">
+          <div class="footer-section">
+           
+            <h3>About ToyZone.pk</h3>
+            <p>Your one-stop shop for high-quality toys in Pakistan! We bring joy to kids with the latest and greatest toys.For any complaints & problems write directly to owner:</p>
+          </div>
+      
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./privacy.html">Privacy Policy</a></li>
+              <li><a href="./terms.html">Terms & Conditions</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.facebook.com/TwitterInc/"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+      
+          <div class="footer-section">
+            <form>
+              <br><br>
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </footer>
+      <p class="footer-bottom">© 2025 ToyZone.pk - All Rights Reserved</p>
+</body>
+</html>
